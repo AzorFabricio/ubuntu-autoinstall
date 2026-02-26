@@ -22,12 +22,12 @@ autoinstall:
         - kdenlive
         - inkscape
         - gdebi
+        - steam
     snaps:
         - name: spotify
           channel: stable
           classic: false
         - name: brave
-        - name: clapper
         - name: clapper
         - name: telegram-desktop
     codecs:
