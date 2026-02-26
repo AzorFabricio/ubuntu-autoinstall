@@ -2,14 +2,14 @@
 autoinstall:
     version: 1
     identity:
-        realname: 'Zer01TI'
-        hostname: z1tsp01dt10
-        username: zer01ti
-        password: '$6$OnzoJhhomoCJ.P3u$/o5jpe1KpFx0SJEtLtEfn.1v/waUaad1R5DjEcvDGFaSTgrLpwB9LTGjKsDFC3OF1ckHpRT8cELKpS6A7gcFV0'
+        realname: 'AzorFabricio'
+        hostname: AzorFabricio-67992559115
+        username: azorfabricio
+        password: '$6$n4WIWVvGEZ.XkLLE$5xae2H8qXCArHy14sgYlNJLqhXOXsm2HdmPvmgCThRaM9KtG8X6lyvN4j/zoyKXLT78CHjDSiO0ssB3gupo.F/'
     locale: pt_BR.utf8
     keyboard:
         layout: br
-    timezone: "America/Sao_Paulo"
+    timezone: "America/Campo_Grande"
     storage:
     layout:
       name: lvm
@@ -19,10 +19,17 @@ autoinstall:
         - gimp
         - vlc
         - ufw
+        - kdenlive
+        - inkscape
+        - gdebi
     snaps:
         - name: spotify
           channel: stable
           classic: false
+        - name: brave
+        - name: clapper
+        - name: clapper
+        - name: telegram-desktop
     codecs:
         install: true
     drivers:
