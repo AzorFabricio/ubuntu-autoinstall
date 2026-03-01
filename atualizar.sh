@@ -21,6 +21,25 @@ sudo apt-get autoclean -y
 # Repara pacotes quebrados.
 sudo dpkg --configure -a
 
+# Limpeza no Navegador
+sudo apt clean
+sudo apt autoclean
+sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+sudo systemd-resolve --flush-caches
+
+sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Cache/*
+sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Code\ Cache/*
+sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/GPUCache/*
+sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/History
+sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Cookies
+sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/
+sudo resolvectl flush-caches
+
+sudo rm -rf ~/.cache/mozilla/firefox/*
+sudo rm ~/.mozilla/firefox/*default/*.sqlite
+sudo rm -rf ~/.cache/chromium/*
+sudo rm -rf ~/.config/chromium/Default/*
+# Neofetch
 sudo apt autoclean -y
 sudo apt install neofetch
 sudo neofetch
