@@ -27,18 +27,16 @@ sudo apt autoclean
 sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 sudo systemd-resolve --flush-caches
 
-sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Cache/*
-sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Code\ Cache/*
-sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/GPUCache/*
-sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/History
-sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Cookies
-sudo rm -rf ~/.config/BraveSoftware/Brave-Browser/
+rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Cache/*
+rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Code\ Cache/*
+rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/GPUCache/*
+rm -rf ~/.config/BraveSoftware/Brave-Browser/
 sudo resolvectl flush-caches
 
-sudo rm -rf ~/.cache/mozilla/firefox/*
-sudo rm ~/.mozilla/firefox/*default/*.sqlite
-sudo rm -rf ~/.cache/chromium/*
-sudo rm -rf ~/.config/chromium/Default/*
+rm -rf ~/.cache/mozilla/firefox/*
+rm ~/.mozilla/firefox/*default/*.sqlite
+rm -rf ~/.cache/chromium/*
+rm -rf ~/.config/chromium/Default/*
 # Neofetch
 sudo apt autoclean -y
 sudo apt install neofetch
