@@ -5,19 +5,31 @@ sudo apt-get upgrade -y
 sudo apt upgrade -y
 sudo apt update && sudo apt upgrade -y
 sudo apt autoremove
+
 # Remove pacotes desnecessários
 sudo apt autoremove -y
+
 # Limpa o cache de pacotes
+sudo apt clean
+sudo apt autoclean
+sudo apt autoremove
+sudo du -sh /var/cache/apt/archives/
+
 # Limpa a lixeira.
 sudo rm -rf /home/$USER/.local/share/Trash/files/*
+
 # Limpa arquivos temporários.
 sudo rm -rf /var/tmp/*
+
 # Limpa o cache do apt-get.
 sudo apt-get clean -y
+
 # Remove repositórios inuteis.
 sudo apt-get autoremove -y
+
 # Remove pacotes obsoletos.
 sudo apt-get autoclean -y
+
 # Repara pacotes quebrados.
 sudo dpkg --configure -a
 
@@ -27,16 +39,28 @@ sudo apt autoclean
 sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 sudo systemd-resolve --flush-caches
 
-rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Cache/*
-rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Code\ Cache/*
-rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/GPUCache/*
-rm -rf ~/.config/BraveSoftware/Brave-Browser/
-sudo resolvectl flush-caches
+# rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Cache/*
+# rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Code\ Cache/*
+# rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/GPUCache/*
+# rm -rf ~/.config/BraveSoftware/Brave-Browser/
+# sudo resolvectl flush-caches
 
 rm -rf ~/.cache/mozilla/firefox/*
 rm ~/.mozilla/firefox/*default/*.sqlite
 rm -rf ~/.cache/chromium/*
 rm -rf ~/.config/chromium/Default/*
+# rm -rf ~/.config/BraveSoftware/Brave-Browser/Default
+# rm -rf ~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/Default
+
+# Abra o navegador e digite na barra de endereço:
+# brave://net-internals/#dns
+# Clique em "Clear host cache"
+
+# pkill -f brave
+  rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Cache/*
+# rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/Cookies
+# rm -rf ~/.config/BraveSoftware/Brave-Browser/Default/History
+
 # Neofetch
 sudo apt autoclean -y
 sudo apt update && sudo apt install neofetch 
