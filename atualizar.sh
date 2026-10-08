@@ -39,5 +39,5 @@ rm -rf ~/.cache/chromium/*
 rm -rf ~/.config/chromium/Default/*
 # Neofetch
 sudo apt autoclean -y
-sudo apt install neofetch
+sudo apt update && sudo apt install neofetch 
 sudo neofetch
